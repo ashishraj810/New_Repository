@@ -4,7 +4,7 @@ using namespace std;
 int BubbleSort(int arr[],int size)
 {
     
-    for(int i ; i<size-1 ; i++)
+    for(int i=0 ; i<size-1 ; i++)
     {
         for(int j=0; j<size-i-1 ; j++)
         {
@@ -22,7 +22,7 @@ int BubbleSort(int arr[],int size)
 
 int main()
 {
-   int arr[]={23,12,4,7,2,16,1};
+   int arr[]={56,9,5,4,2,12,8,11,7};
    int size =sizeof(arr)/sizeof (arr[0]);
    
 
