@@ -1,1 +1,0 @@
-int start=0,end=sizeof(arr)-1;
