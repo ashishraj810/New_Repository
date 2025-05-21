@@ -4,19 +4,27 @@ using namespace std;
 int main()
 {
     int arr[5]={3,5,7,8,9};
-    int target,i;
+    int target,i,index1=-1,index2=-1;
     cout<<"Enter the target :";
     cin>>target;
 
-    for(i=0 ; i<5 ; i++)
+    int start=0,end=sizeof(arr)/sizeof(arr[0])-1;
+    
+    while(start<=end)
     {
-        if(arr[i]+arr[i+1]==target)
+        if(arr[start]+arr[end]==target)
         {
-            cout<<i<<" "<<(i+1);
+            cout<<start<<" "<<end;
+            break;
         }
 
-        else
-        return -1;
+        else if(arr[start]+arr[end]>target)
+           end--;
 
+        else 
+           start++;
     }
+
+    
+    return 0;
 }
