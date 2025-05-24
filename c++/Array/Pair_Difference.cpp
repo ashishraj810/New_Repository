@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int arr[5]={3,5};
+    int arr[6]={3,5,7,8,12,15};
     int target,i,index1=-1,index2=-1,n;
     cout<<"Enter the target :";
     cin>>target;
