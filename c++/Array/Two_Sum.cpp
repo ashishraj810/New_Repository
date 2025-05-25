@@ -23,8 +23,6 @@ int main()
 
         else 
            start++;
-    }
-
-    
+    }    
     return 0;
 }
