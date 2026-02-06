@@ -6,18 +6,42 @@ using namespace std;
 class student
 {
     string name;
-    int age,roll_number;
+    int age=-1,roll_number;
     string grade;
 
+    
     public:
+    
+    //Setter Function Implemenataion.
+
     void setage(int x)
     {
-        age=x;
+        if(x<1 || x>100)
+        {
+            cout<<"Invalid age"<<endl;
+            age=-1;
+            return;
+        }
+        age = x;
     }
+
     void setname(string n)
     {
-        name=n;
+        if(n.size()==0)
+        {
+            cout<<"Invalid name"<<endl;
+            return;
+        }
+        name = n;
     } 
+
+    void setgrade(string g)
+    {
+        grade = g;
+    }
+
+
+    //Getter Function Implemenataion.
 
     void getname()
     {
@@ -26,9 +50,17 @@ class student
 
     void getage()
     {
+        if(age!=-1)     // Print only if valid
         cout<<age<<endl;
     }
 
+    string getgrade(int pin)
+    {
+        if(pin == 987)
+        cout<< grade<<endl;
+        else
+        cout<<"wrong pin"<<endl;
+    }
 
 };
 
@@ -36,8 +68,13 @@ class student
 int main()
 {
     student s1;
-    s1.setname("Ashish");
-    s1.setage(23);
+    s1.setname("R");
+    s1.setage(101);
+    s1.setgrade("B+");
+
     s1.getname();
     s1.getage();
+    s1.getgrade(98);
+
+    return 0;
 }
